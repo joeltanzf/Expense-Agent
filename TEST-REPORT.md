@@ -1,4 +1,4 @@
-# v1.0.0 packaging and backup correction â€” 2026-09-27
+# v1.0.0 packaging and backup correction 2026-09-27
 
 The rebuilt installer includes the project MIT LICENSE. Workbook backup retention now sorts by backup timestamp, independently of the expense year, and retains the newest 30 workbook versions.
 

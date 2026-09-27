@@ -40,7 +40,7 @@ def copy_distribution(name):
 for name in ['pdfplumber','openpyxl']:copy_distribution(name)
 for folder in ['app','scripts','docs']:
     shutil.copytree(root/folder,payload/folder,ignore=shutil.ignore_patterns('__pycache__','*.pyc'))
-for name in ['README.md','requirements.txt','THIRD-PARTY-NOTICES.md']:
+for name in ['README.md','requirements.txt','THIRD-PARTY-NOTICES.md','LICENSE']:
     shutil.copy2(root/name,payload/name)
 (payload/'components.json').write_text(json.dumps({'python':sys.version.split()[0],'packages':seen},indent=2))
 compiler=Path(os.environ['SystemRoot'])/'Microsoft.NET/Framework64/v4.0.30319/csc.exe'

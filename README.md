@@ -22,7 +22,7 @@ I built TNG Expense Agent to make it easier to keep track of everyday spending. 
 | Track expenses | Includes supported purchases and outgoing transfers; excludes reloads, incoming money and GO+ movements. |
 | Add entries manually | Save a date, description and price directly from the app. |
 | Organize by year and month | Creates files such as `Expenses-2026.xlsx`, with sheets such as January and February. |
-| Rename descriptions | Save rules such as `Example Market` â†’ `Groceries` for existing and future expenses. |
+| Rename descriptions | Save rules such as `Example Market` ’ `Groceries` for existing and future expenses. |
 | Avoid repeated imports | Skips previously imported PDFs and known transaction references in overlapping statements. |
 | Review possible matches | Lets you decide whether a PDF expense matches an entry you previously typed yourself. |
 | Delete expenses | Remove a selected manual or PDF expense after confirmation, with a database backup first. |

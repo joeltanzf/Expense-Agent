@@ -307,7 +307,8 @@ def _export_year(db, payload, year, force=False):
         ON CONFLICT(year) DO UPDATE SET file_hash=excluded.file_hash,payload_hash=excluded.payload_hash,pending=0,reason='' ''',
         (year,digest(path.read_bytes()),payload_hash))
     db.commit()
-    for old in sorted((DATA/'backups').glob('Expenses-*.xlsx'), reverse=True)[30:]:
+    for old in sorted((DATA/'backups').glob('Expenses-*.xlsx'),
+                      key=lambda p: p.name.split('-', 2)[2], reverse=True)[30:]:
         old.unlink()
     return {'synced':True,'message':f'{path.name} is up to date.'}
 

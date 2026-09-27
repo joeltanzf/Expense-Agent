@@ -131,4 +131,21 @@ class YearAndDeletionTests(unittest.TestCase):
         with self.assertRaises(agent.AgentError):agent.delete_expense(self.db,None)
         self.assertFalse(agent.delete_expense(self.db,'missing')['deleted']);self.assertEqual(self.count(),1)
 
+    def test_workbook_backups_keep_newest_date_across_expense_years(self):
+        self.add('2025-01-01', 'Older year', '5.00')
+        folder = agent.DATA / 'backups'
+        older = []
+        for index in range(30):
+            path = folder / f'Expenses-2026-20000101-000000-{index:06d}-fictional.xlsx'
+            path.write_bytes(b'fictional workbook backup')
+            older.append(path)
+        previous = agent.workbook_path('2025').read_bytes()
+        self.add('2025-01-02', 'New change to older year', '2.00')
+        remaining = list(folder.glob('Expenses-*.xlsx'))
+        self.assertEqual(len(remaining), 30)
+        self.assertFalse(older[0].exists())
+        self.assertTrue(older[-1].exists())
+        self.assertTrue(any(p.name.startswith('Expenses-2025-') and
+                            p.read_bytes() == previous for p in remaining))
+
 if __name__=='__main__':unittest.main(verbosity=2)

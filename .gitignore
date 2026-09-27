@@ -1,0 +1,13 @@
+.venv/
+runtime/
+data/
+work/
+dist/
+__pycache__/
+*.pyc
+*.xlsx
+*.sqlite3*
+*.pdf
+*.exe
+*.zip
+.env

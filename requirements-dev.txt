@@ -1,0 +1,3 @@
+-r requirements.txt
+reportlab==4.4.9
+packaging>=24

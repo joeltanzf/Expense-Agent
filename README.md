@@ -8,7 +8,7 @@ You can also enter expenses yourself, rename merchant descriptions, remove unwan
 
 The installed app works locally. It does not require a Codex subscription, an API key, an AI service, Node.js, or a separate Python installation.
 
-[Install the app](#install-and-start) Â· [User guide](#how-to-use-it) Â· [How it works](#how-it-works) Â· [Run from source](#run-from-source)
+[Install the app](#install-and-start) · [User guide](#how-to-use-it) · [How it works](#how-it-works) · [Run from source](#run-from-source)
 
 ## Why I built this
 

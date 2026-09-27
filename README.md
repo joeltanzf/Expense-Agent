@@ -8,7 +8,7 @@ You can also enter expenses yourself, rename merchant descriptions, remove unwan
 
 The installed app works locally. It does not require a Codex subscription, an API key, an AI service, Node.js, or a separate Python installation.
 
-[Install the app](#install-and-start) · [User guide](#how-to-use-it) · [How it works](#how-it-works) · [Run from source](#run-from-source)
+[Install the app](#install-and-start) Â· [User guide](#how-to-use-it) Â· [How it works](#how-it-works) Â· [Run from source](#run-from-source)
 
 ## Why I built this
 
@@ -22,7 +22,7 @@ I built TNG Expense Agent to make it easier to keep track of everyday spending. 
 | Track expenses | Includes supported purchases and outgoing transfers; excludes reloads, incoming money and GO+ movements. |
 | Add entries manually | Save a date, description and price directly from the app. |
 | Organize by year and month | Creates files such as `Expenses-2026.xlsx`, with sheets such as January and February. |
-| Rename descriptions | Save rules such as `Example Market` → `Groceries` for existing and future expenses. |
+| Rename descriptions | Save rules such as `Example Market` â†’ `Groceries` for existing and future expenses. |
 | Avoid repeated imports | Skips previously imported PDFs and known transaction references in overlapping statements. |
 | Review possible matches | Lets you decide whether a PDF expense matches an entry you previously typed yourself. |
 | Delete expenses | Remove a selected manual or PDF expense after confirmation, with a database backup first. |
@@ -54,7 +54,7 @@ To run or modify the code yourself, follow [Run from source](#run-from-source) b
 4. Review any possible matches with manual entries.
 5. Check the import result, select the year, and choose **Open [year] Excel**.
 
-A password entered in the upload dialog is used for that upload and is not saved. To remember it, enter it under **Settings → PDF password** and choose **Save settings**. Saved passwords use Windows encryption for your account. If Windows cannot save or unlock one, use the one-time upload field instead.
+A password entered in the upload dialog is used for that upload and is not saved. To remember it, enter it under **Settings â†’ PDF password** and choose **Save settings**. Saved passwords use Windows encryption for your account. If Windows cannot save or unlock one, use the one-time upload field instead.
 
 The parser supports the text-based TNG statement layout it was built for. Scanned PDFs, unfamiliar layouts and unknown transaction types stop for review without importing a partial statement. Use statements smaller than 30 MB with no more than 150 pages.
 
@@ -231,7 +231,7 @@ The output folder must not already exist. The build produces the installer, its 
 
 I checked the app manually before release. Automated testing of the version with year selection and expense deletion also produced these results:
 
-- **32 backend tests passed**, with no skipped tests.
+- **33 backend tests passed**, with no skipped tests.
 - **24 installation and integration checks passed**, including an upgrade from the previous installer using fictional data.
 - UI checks covered year navigation, choosing the workbook to open, cancellation, and confirmed deletion.
 - Microsoft Open XML validation found **zero errors** in the tested 2025 and 2026 workbooks.
@@ -266,3 +266,7 @@ README.md                This guide
 Keep financial data, passwords, generated workbooks, bundled runtimes and build intermediates out of the source repository. Retain third-party license notices when distributing the installer. A component's license does not automatically apply to the project's own code.
 
 This is an independent project and is not affiliated with or endorsed by Touch 'n Go or Microsoft.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE). Third-party components retain their own licenses; see [Third-party notices](THIRD-PARTY-NOTICES.md).

@@ -1,3 +1,15 @@
+# v1.0.0 packaging and backup correction â€” 2026-09-27
+
+The rebuilt installer includes the project MIT LICENSE. Workbook backup retention now sorts by backup timestamp, independently of the expense year, and retains the newest 30 workbook versions.
+
+All 33 backend tests passed, with no skips, against the updated source and again against the installed application with its bundled runtime (using a separate development dependency for fictional PDF generation). An isolated installer run succeeded; all payload manifest hashes and the installed MIT license were verified. The added regression test creates 30 older backups of a newer expense year, updates an older-year workbook, and verifies that the newly created backup is kept while the oldest backup is removed.
+
+The maintainer reports successful manual Windows testing of the preceding build. The earlier installation/UI results below are historical and were not rerun as part of this source test run. The installer remains unsigned.
+
+Rebuilt installer SHA-256: `48b5c3662f147ddd4e4958adea9c348c3b8c54ed8c30b010616637f8c393f505`
+
+---
+
 # Year selection and expense deletion: test report
 
 Date: 2026-09-26
@@ -33,4 +45,4 @@ No real expenses, statements, passwords or workbooks were used or included. The 
 
 Backups and the old combined workbook may retain deleted records. Deletion affects the current app records and yearly workbooks; it is not secure erasure. A manual entry with no known PDF reference cannot automatically suppress a future PDF transaction.
 
-SHA-256: `e24e8308d31f8bce3249b8d80d9cf0a2b21964e56a9aaa2c2afa5af817e9b555`
+Previous installer SHA-256: `e24e8308d31f8bce3249b8d80d9cf0a2b21964e56a9aaa2c2afa5af817e9b555`
